@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--Custom CSS/JS/PHP used here: 'index.css', 'index.js' -->
 <html>
     <head>
         <title>Parking Vu</title>
@@ -27,10 +28,10 @@
                         <a class="nav-link" href="./driver_access.html">Driver Access</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="./CreationPage.html">New Lot/Event</a>
+                        <a class="nav-link" href="./CreationPage.html">New Lot/Event</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="./Owner_Attendant_Lot_Access.html">Worker Access</a>
+                        <a class="nav-link" href="./Owner_Attendant_Lot_Access.html">Worker Access</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./loginPage.html">Login/Register</a>
@@ -46,84 +47,103 @@
             </div>
         </div>
 
-        <div style="overflow-x:auto">
-            <table id="events">
+        <div class="eventTable table-responsive" style="overflow-x:auto">
+            <table class="table table-bordered" id="events">
                 <tr>
                     <th>Event</th>
-                    <th>Address</th>
-                    <th>City</th>
-                    <th>State</th>
-                    <th>Time</th>
-                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Date & Time</th>
                     <th>Details</th>
-                    <th>Save</th>
-                    <th>Select</th>
+                    <th>Save/Select</th>
                 </tr>
                 <tr>
                     <td>CSC 430</td>
-                    <td>501 Dan Reneau Dr</td>
-                    <td>Ruston</td>
-                    <td>LA</td>
-                    <td>10:00 am</td>
-                    <td>2/20/18</td>
+                    <td>501 Dan Reneau Dr. Ruston,LA</td>
+                    <td> 2/24/18 10:00 AM</td>
                     <td>
-                        <a class="btn btn-primary btn-sm" href="#" role="button">Select</a>
+						<button type="button" class="btn btn-primary btn-sm" data-toggle="popover"  data-container="body" data-trigger="focus" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
+						Details
+						</button>
                     </td>
                     <td>
-                        <a class="btn btn-primary btn-sm" href="#" role="button">Details</a>
-                    </td>
-                    <td>
-                        <a class="btn btn-primary btn-sm" href="#" role="button">Save</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>CSC 430</td>
-                    <td>501 Dan Reneau Dr</td>
-                    <td>Ruston</td>
-                    <td>LA</td>
-                    <td>10:00 am</td>
-                    <td>2/22/18</td>
-                    <td>
-                        <a class="btn btn-primary btn-sm" href="#" role="button">Select</a>
-                    </td>
-                    <td>
-                        <a class="btn btn-primary btn-sm" href="#" role="button">Details</a>
-                    </td>
-                    <td>
-                        <a class="btn btn-primary btn-sm" href="#" role="button">Save</a>
+                       <div class="dropdown">
+						  <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Save/Select
+						  </button>
+						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item" href="#">Save</a>
+							 <div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Select</a>
+						  </div>
+						</div>
                     </td>
                 </tr>
                 <tr>
                     <td>CSC 430</td>
-                    <td>501 Dan Reneau Dr</td>
-                    <td>Ruston</td>
-                    <td>LA</td>
-                    <td>10:00 am</td>
-                    <td>2/24/18</td>
+                    <td>501 Dan Reneau Dr. Ruston,LA</td>
+                    <td> 2/24/18 10:00 AM</td>
                     <td>
-                        <a class="btn btn-primary btn-sm" href="#" role="button">Select</a>
+						<button type="button" class="btn btn-primary btn-sm" data-toggle="popover"  data-container="body" data-trigger="focus" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
+						Details
+						</button>
                     </td>
                     <td>
-                        <a class="btn btn-primary btn-sm" href="#" role="button">Details</a>
+                       <div class="dropdown">
+						  <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Save/Select
+						  </button>
+						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item" href="#">Save</a>
+							 <div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Select</a>
+						  </div>
+						</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CSC 430</td>
+                    <td>501 Dan Reneau Dr. Ruston,LA</td>
+                    <td> 2/24/18 10:00 AM</td>
+                    <td>
+						<button type="button" class="btn btn-primary btn-sm" data-toggle="popover"  data-container="body" data-trigger="focus" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
+						Details
+						</button>
                     </td>
                     <td>
-                        <a class="btn btn-primary btn-sm" href="#" role="button">Save</a>
+                       <div class="dropdown">
+						  <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Save/Select
+						  </button>
+						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item" href="#">Save</a>
+							 <div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Select</a>
+						  </div>
+						</div>
                     </td>
                 </tr>
             </table>
         </div>
 
-        <div id="footer">
-            Copyright &copy; parkingvu.com
-        </div>
+        <div class="footer">
+			<p>Copyright &copy; parkingvu.com</p>
+		</div>
 
 
         <script src="resources/js/index.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+		<script> $(function (){
+			  $('[data-toggle="popover"]').popover()
+		});
+		$('.popover-dismiss').popover({
+			trigger: 'focus'
+		});</script>
     </body>
 </html>

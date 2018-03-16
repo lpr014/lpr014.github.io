@@ -1,18 +1,48 @@
 <!DOCTYPE html>
+<!--Custom CSS/JS/PHP files used here: 'index.css', 'EventMap.js'-->
 <html>
     <head>
         <title>Parking Vu</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="resources/css/index.css">
+		<link rel="stylesheet" href="resources/css/eventMap.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
 
-        <script src="resources\js\helpers.js"></script>
-        <script>genNavBar();</script>
+        <!-- Navigation Menu -->
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="./index.html">Parking Vu</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./EventMap.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./driver_access.html">Driver Access</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./CreationPage.html">New Lot/Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Owner_Attendant_Lot_Access.html">Worker Access</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./loginPage.html">Login/Register</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
 
-        <div style="overflow-x:auto">
+        <div class ="eventTable" style="overflow-x:auto">
                 <table id="events">
             </table>
         </div>
@@ -23,13 +53,18 @@
         
         <center>
             <div id="googleMap" style="width:300px;height:300px;position: fixed"></div>
+            <div id="legend"><h3>Legend</h3></div>
+
+            <!--
             <script>
+                var map;
                 function myMap() {
                     var mapProp = {
                         center: new google.maps.LatLng(32.52938, -92.649237),
-                        zoom: 14
+                        zoom: 14,
+                        mapTypeId: 'roadmap'
                     };
-                    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                    map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
                     var center;
                     function calculateCenter() {
                         center = map.getCenter();
@@ -40,15 +75,96 @@
                     google.maps.event.addDomListener(window, 'resize', function () {
                         map.setCenter(center);
                     });
+
+                    /* Legend */
+                    
+                    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+                    var icons = {
+                    parking: {
+                        name: 'Parking',
+                        icon: iconBase + 'parking_lot_maps.png' },
+                    info: {
+                        name: 'Info',
+                        icon: iconBase + 'info-i_maps.png'}
+                    };
+
+                    var features = [
+                    { position: new google.maps.LatLng(32.53138, -92.649437), type: 'info' },
+                    { position: new google.maps.LatLng(32.52738, -92.649037), type: 'parking' }
+                    ];
+
+                    // Create markers.
+                    features.forEach(function(feature) {
+                    var marker = new google.maps.Marker({
+                        position: feature.position,
+                        icon: icons[feature.type].icon,
+                        map: map
+                    });
+                    });
+
+                    var legend = document.getElementById('legend');
+                    for (var key in icons) {
+                        var type = icons[key];
+                        var name = type.name;
+                        var icon = type.icon;
+                        var div = document.createElement('div');
+                        div.innerHTML = '<img src="' + icon + '"> ' + name;
+                        legend.appendChild(div);
+                    }
+
+                    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+
+                    // Drawing
+                    /*
+                    var drawingManager = new google.maps.drawing.DrawingManager({
+                        drawingMode: google.maps.drawing.OverlayType.MARKER,
+                        drawingControl: true,
+                        drawingControlOptions:
+                        {
+                            position: google.maps.ControlPosition.TOP_CENTER,
+                            drawingModes: ['marker', 'polygon']
+                        },
+                        markerOptions: 
+                        {
+                            icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                            draggable: true
+                        },
+                        polygonOptions:
+                        {
+                            editable: true
+                        }
+                    });
+                    drawingManager.setMap(map);*/
+
+                    // Dummy Drawing
+                    var dummyLot = new google.maps.Polygon({
+                        paths:
+                        [
+                            { lat: 32.53538, lng: -92.649937 },
+                            { lat: 32.53538, lng: -92.648937 },
+                            { lat: 32.52538, lng: -92.648937 },
+                            { lat: 32.52538, lng: -92.649937 },
+                            { lat: 32.53538, lng: -92.649937 }
+                        ]
+                    });
+                    dummyLot.setMap(map);
+
+                    //drawingManager.setOptions({drawingControl: false});
                 }
             </script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBse2wOe_D6lYsRj7VOgzTT-1n8fJdxocE&callback=myMap&libraries=drawing"></script>-->
 
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBse2wOe_D6lYsRj7VOgzTT-1n8fJdxocE&callback=myMap"></script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBse2wOe_D6lYsRj7VOgzTT-1n8fJdxocE&callback=initMap&libraries=drawing"></script>
+
+            <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBse2wOe_D6lYsRj7VOgzTT-1n8fJdxocE&callback=UpdateLegend"></script>-->
+            <!--<script async src="resources\js\EventMap.js"></script>
+            <script>UpdateLegend(map);</script>-->
+
         </center>
 
-        <div id="footer">
-                Copyright &copy; parkingvu.com
-        </div>
+        <div class="footer">
+			<p>Copyright &copy; parkingvu.com</p>
+		</div>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
