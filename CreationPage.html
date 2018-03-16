@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+   <head>
+		<title> ParkingVu</title>
+		<link rel="stylesheet" href="resources/css/CreationPage.css">
+		<script src="resources/js/CreationPage.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+		 crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+		<!--- Nav Menu -->
+		<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+			<a class="navbar-brand" href="./index.html">Parking Vu</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarToggler">
+				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="./index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Driver Access</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="./CreationPage.html">New Lot/Event</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="./Owner_Attendant_Lot_Access.html">Worker Access</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="loginPage.html">Login/Register</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="tab">
+				<button class="tablinks" onclick="openCreationPage(event, 'eventCreationPage')">Event Creation Page</button>
+				<button class="tablinks" onclick="openCreationPage(event, 'lotCreationPage')">Lot Creation Page</button>
+		</div>
+		<!-- Tab content -->
+		<!-- Event Creation Page-->
+		<div class="row">
+			<div id="eventCreationPage" class="tabcontent">
+				<form>
+				<div class="form-group row">
+					<label for="eventCreatorName" class="col-sm-1 col-md-2 col-form-label">Event Creator Name</label>
+					<div class="col-sm-3 col-md-6">
+						<input type="text" class="form-control" id="eventCreatorName">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="eventName" class="col-sm-1 col-md-2 col-form-label">Event Name</label>
+					<div class="col-sm-3 col-md-6">
+						<input type="text" class="form-control" id="eventName">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="eventLocation" class="col-sm-1 col-md-2 col-form-label">Event Location:</label>
+					<div class="col-sm-3 col-md-6">
+						<input type="text" class="form-control" id="eventLocation">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="eventPrice" class="col-sm-1 col-md-2 col-form-label">Event Price:</label>
+					<div class="col-sm-3 col-md-6">
+						<input type="text" class="form-control" id="formGroupExampleInput2">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="eventDeatails" class="col-sm-1 col-md-2 col-form-label">Event Details:</label>
+					<div class="col-sm-3 col-md-6">
+						<textarea class="form-control" id="eventDeatails" rows="3"></textarea>
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-12" id="eventCreationButtons">
+						<a class="btn btn-primary" href="#" role= "button">Submit</a>
+						<a class="btn btn-primary" id="cancelBtn" href="#" role= "button">Cancel</a>
+					</div>
+				</div>
+			</form>
+			</div>
+		</div>
+		<!-- Parking Lot Creation Page-->
+		<div class="row">
+			<div id="lotCreationPage" class="tabcontent"> 
+				<form>
+					 <div class="form-group row">
+						<label for="lotOwnerName" class="col-sm-1 col-md-2 col-form-label">Lot Owner Name:</label>
+						<div class="col-sm-3 col-md-6">
+							<input type="text" class="form-control" id="lotOwnerName">
+						</div>
+					</div>
+					 <div class="form-group row">
+						<label for="lotLocation" class="col-sm-1 col-md-2 col-form-label">Lot Location:</label>
+						<div class="col-sm-3 col-md-6">
+							<input type="text" class="form-control" id="lotLocation">
+						</div>
+					</div>
+					 <div class="form-group row">
+						<label for="lotPrice" class="col-sm-1 col-md-2 col-form-label">Lot Price:</label>
+						<div class="col-sm-3 col-md-6">
+							<input type="text" class="form-control" id="lotPrice">
+						</div>
+					</div>
+					 <div class="form-group row">
+						<label for="lotDeatails" class="col-sm-1 col-md-2 col-form-label">Lot Details:</label>
+						<div class="col-sm-3 col-md-6">
+							<textarea class="form-control" id="lotDeatails" rows="3"></textarea>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-sm-12" id="lotCreationButtons">
+							<a class="btn btn-primary btn-sm" href="#" role= "button">Request</a>
+							<a class="btn btn-primary btn-sm" id="cancelBtn" href="#" role= "button">Cancel</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<br>
+		<div id="footer">
+			Copyright &copy; parkingvu.com
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		 crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		 crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		 crossorigin="anonymous"></script>
+   </body>
+</html>

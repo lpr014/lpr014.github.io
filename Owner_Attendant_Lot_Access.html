@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+    <html>
+
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="resources/css/owneraccesslot.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>ParkingVu Owner Lot Access</title>
+    </head>
+
+    <body>
+        <!-- Navigation Menu -->
+        <!--Nav Menu provided by Chris-->
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="./index.html">Parking Vu</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Driver Access</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="./CreationPage.html">New Lot/Event</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link disabled" href="./Owner_Attendant_Lot_Access.html">Worker Access</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login/Register</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div id="LotName">
+            <h2> ParkingLotName </h2>
+        </div>
+
+		<div class = "lot-status">
+
+			<h1><strong> Change the Status of the parking lot here. </strong></h1>
+			<!--This script checks for null input to 'status', if there is null input, it will reject it. Otherwise, it will update it to the output, 'status'.-->
+            <script src = "resources/js/updatelotscripts.js"></script>
+            
+			<!--This form lists the options to the parking lot owner/attendant to update the availability of the parking lot.-->
+			<form name = "lot_status_select" id = "lot_update">
+				<select  id= "status" name="status" type = "status">
+					<option value="NULL">select</option>
+					<option value="closed">CLOSED</option>
+					<option value="0">Empty</option>
+					<option value="25">25% Full</option>
+					<option value="50">50% Full</option>
+					<option value="75">75% Full</option>
+					<option value="full">FULL</option>
+				</select>
+
+                <!-- submit the Parkink Lot Update-->
+                <input type="button" onclick="SanityCheck()" value="Submit">
+            </form>
+        </div>
+
+        <!--Placeholder map, will add more features in the next sprint and better optimize on the page, will most likely use a universal jscript on every page.-->
+        <center>
+            <div id="googleMap" style="width:300px;height:300px;position: fixed"></div>
+            <script>
+                function myMap() {
+                    var mapProp = {
+                        center: new google.maps.LatLng(32.52938, -92.649237),
+                        zoom: 14
+                    };
+                    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                    var center;
+                    function calculateCenter() {
+                        center = map.getCenter();
+                    }
+                    google.maps.event.addDomListener(map, 'idle', function () {
+                        calculateCenter();
+                    });
+                    google.maps.event.addDomListener(window, 'resize', function () {
+                        map.setCenter(center);
+                    });
+                }
+            </script>
+
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBse2wOe_D6lYsRj7VOgzTT-1n8fJdxocE&callback=myMap"></script>
+        </center>
+        <div id="footer">
+            Copyright &copy; parkingvu.com
+        </div>
+
+    </body>
+
+
+
+</html>
+
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parking Vu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="resources/css/index.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+    </head>
+    <body>
+        <!-- Navigation Menu -->
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="./index.html">Parking Vu</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./EventMap.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./driver_access.html">Driver Access</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="./CreationPage.html">New Lot/Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="./Owner_Attendant_Lot_Access.html">Worker Access</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./loginPage.html">Login/Register</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="wrapper input-group mb-3">
+            <input type="text" class="form-control" placeholder="Find an Event" aria-label="Find an Event" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Search</button>
+            </div>
+        </div>
+
+        <div style="overflow-x:auto">
+            <table id="events">
+                <tr>
+                    <th>Event</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Time</th>
+                    <th>Date</th>
+                    <th>Details</th>
+                    <th>Save</th>
+                    <th>Select</th>
+                </tr>
+                <tr>
+                    <td>CSC 430</td>
+                    <td>501 Dan Reneau Dr</td>
+                    <td>Ruston</td>
+                    <td>LA</td>
+                    <td>10:00 am</td>
+                    <td>2/20/18</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="#" role="button">Select</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="#" role="button">Details</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="#" role="button">Save</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CSC 430</td>
+                    <td>501 Dan Reneau Dr</td>
+                    <td>Ruston</td>
+                    <td>LA</td>
+                    <td>10:00 am</td>
+                    <td>2/22/18</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="#" role="button">Select</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="#" role="button">Details</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="#" role="button">Save</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CSC 430</td>
+                    <td>501 Dan Reneau Dr</td>
+                    <td>Ruston</td>
+                    <td>LA</td>
+                    <td>10:00 am</td>
+                    <td>2/24/18</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="#" role="button">Select</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="#" role="button">Details</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="#" role="button">Save</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="footer">
+            Copyright &copy; parkingvu.com
+        </div>
+
+
+        <script src="resources/js/index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    </body>
+</html>

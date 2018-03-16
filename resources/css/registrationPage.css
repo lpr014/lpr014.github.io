@@ -1,0 +1,94 @@
+#footer {
+   position: absolute;
+   bottom: 0%;
+   width: 100%;
+   height: 30px;   /* Height of the footer */
+   color: darkslategray;
+   text-align: center;
+   left:0;
+   overflow:visible;
+   background-color:lightgray;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+form {
+	padding-top: 40px;
+	padding-left: 45px;
+	padding-right: 45px;
+}
+
+#cancelBtn{
+	border-radius: 4px;
+	background-color:red;
+	color:white;
+}
+
+#links{
+	bottom: 0%;
+	position: static;
+}
+
+.typeOfUser{
+	
+}
+
+.buttons {
+	margin-left: 1120px;
+}
+
+#registrationBtns{
+	bottom: 0%;
+	position: static;
+}
+
+@media screen and (max-width: 1024px){
+	form {
+		height: 85%;
+		padding-top: 90px;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	
+	.buttons {
+		margin-left: 765px;
+	}
+}
+
+@media screen and (max-width: 768px){
+	form {
+		height: 85%;
+		padding-top: 90px;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	
+	.buttons {
+		margin-left: 510px;
+	}
+}
+
+@media screen and (max-width: 420px){
+	form {
+		height: 718px;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 15px;
+	}	
+	
+	.buttons {
+		margin-left: 160px;
+	}
+}

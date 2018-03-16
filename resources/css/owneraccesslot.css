@@ -1,0 +1,47 @@
+/*Used in "Owner_Attendant_Lor_Access.html*/
+body {
+	background-color: white;
+	text-align: center;
+}
+
+
+
+/*Need to make this better*/
+#LotName{
+    text-align: left;
+    font-size: 100%;
+    font-family: Arial;
+    color: red;
+    position: static;
+    bottom: 80%;
+    left: 15%;
+}
+
+
+h1 {
+		color: blue;
+		font-family: arial;
+		font-size: 150%;
+        text-align: center;
+	}
+	
+.lot-status {
+	text-align: center;
+	margin-top: 10%;
+}
+
+#footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 30px;
+   color: darkslategray;
+   text-align: center;
+   left: 0;
+   overflow: visible;
+   background-color: lightgray;
+}
+
+#status{
+	font-size: 20px;
+}
