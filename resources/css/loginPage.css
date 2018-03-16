@@ -16,6 +16,10 @@
   box-sizing: inherit;
 }
 
+body{
+	text-align: center;
+}
+
 .btn{
 	margin-left: 555px;
 }
