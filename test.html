@@ -9,7 +9,20 @@
 	<script src ="resources/js/test.js"></script>
     <div class="g-signin2" data-onsuccess="onSignIn", "signinCallback" data-theme="dark"></div>
 	
-	
+	<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyAjGapBfiItTGLsokI9Hp5ZHb-0H-oiso0",
+			authDomain: "parking-vue.firebaseapp.com",
+			databaseURL: "https://parking-vue.firebaseio.com",
+			projectId: "parking-vue",
+			storageBucket: "parking-vue.appspot.com",
+			messagingSenderId: "512485883540"
+		};
+		var provider = new firebase.auth.GoogleAuthProvider();
+		firebase.initializeApp(config);
+	</script>
     <script>
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
