@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "parking-vue",
+  "private_key_id": "f2eb1b2975a98dfd382b146234eea305f00812d5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCIsqxbIyosatk1\noCUMc2fttR+5CigeXHhcKT2KLDvyILRFRKicyuhmoaxmwTzzqMaS8aYkqr01s+F5\nhyr7EIotPNBFocpyqq4RLBvjG8IdkLSkLejeB+1nNSj0z9Yk/CbYTRwK4s3lQ/BM\nRy+y70uddOTr1ZmkWlHAfKCU+cHnzVXNVpj0gbz4wGH/1nVXHVqYuFiOiWoVq/Vk\neqBGECDE0ENdQC1qH2884h8IzAKqVZneSHNSxMKPTVERtYdPkNWwK/e3MVdqbKAS\nt+d7KcQaKo9MQp86c36pCa0qp+p/rswSQZv9KcFcKzn85PNIrFyVFZhZF8z5N6ev\nGi/DBJQhAgMBAAECggEADnSZjCIz9qI+ccCrhk1qcT1Y+1H/A9XqvvE4AiVzGePa\nOGR+MaV17ct9PhkDc29Wv2mJNKGvFE+fQYEZGxdoy0ed7S0iqd1RfryjvtCbxpFb\nvuxhbqBXOzWojPnxBvR4vaEq3N5W4F6eucxB16ndPMuEnUlXX+VStZigSRy/w/2/\n22ACN28LWky1SXuSD8OxtI6Cky6+YDbTHFSfgwxix94rDB7mttWGwvZo2IRndQWS\n88NqPzqWYfRKFls9oA2dXiu+q/0upNLXLay1BjemadmSAIw4FBM7yKV2Cg19DC0o\nSWMGaAmcH1TpAgsyYYQCLgf8mjpNgZ/jHe0jQ7K/yQKBgQC7QimRpk7Wh01Hem0w\nxkbWJvMDK5nG8aXDGrqzcwdlgSvc1vZJjGaDCNR++8DOMD4z56MIS0rrFI0niM7b\nV3Uc2Z5YMabCfct7/XgCVs0yjeyM5+MlRYoC5AbpA5nmWclfGTie8y/WSQnb8MR5\nCjigTNHE9gKmPHQNtGQnO06LKQKBgQC64QbW8gbbxgq7/NNsflczFPyCvFIn1fg7\nFUFvEaiQHDwl+1OdoKA4jTxYl0J5xbVrQs4bF8WnkXrqC52Q2+tyJSQbyNSwozIU\nY1evgndREQPNxw+MyN1kJtDYg7u3pp2o1J7QvN2mRz7Gz+6c5Ns9eEPzOGv41sOC\na1QDgNXYOQKBgQCygyQ1oSFPCbT2CxPEh4BH7uGDiDEUopCvKfAJ2gKXFUjHQnWP\nL7UZ/XT1iPIInZzuxkd5RK2q5PCbW6Q3HWybkCmPUeXzSxCMptmdATqkkv+KZBT6\nFwy2LMMZp0Ezgyyg594+SP61fPNVJHVoHgJVbmYbKZrk9oR7/Bft/m+l4QKBgQCf\nc00QrWUos+uIxonmsk3Yqflh2ykGEE1CrDoueJSokU7I4Y5QmjLazbdFp5nyqLzI\njjGpcDkXZsvHUq3YYaycshADHPJM3JHoT3MLr3f61Ve3hjdAWkp8H5pmgs/yPNmc\nqf3wAJXmQDfSDqx7ddGSu0DPD78gjK44YzdF3fGYEQKBgQCxczgme7vCJfef3F99\nHrSldPFlBu+/z1gCxliaAbSwkBKwbQRziTFMPzq3+CMvAl0i+O6MJ4xd19XboKJ/\n5aNrX7gpA/mKBcFegnW9jKFLldicTRGa5msTGGc253i9yTUXathj673WjsFHQo1U\ntQ6WSh+W98i3NkW0tXC+3kM1Kw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "aws-cognito-use@parking-vue.iam.gserviceaccount.com",
+  "client_id": "115379689871878620109",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/aws-cognito-use%40parking-vue.iam.gserviceaccount.com"
+}
