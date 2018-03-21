@@ -12,6 +12,9 @@
                 crossorigin="anonymous"></script>
         <link rel="stylesheet" href="resources/css/owneraccesslot.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="google-signin-scope" content="profile email">
+        <meta name="google-signin-client_id" content="512485883540-4bq08gsc34i10p4blggc4660k4o8vqvd.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
 
         <title>ParkingVu Owner Lot Access</title>
     </head>
@@ -42,13 +45,16 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="./Owner_Attendant_Lot_Access.html">Worker Access</a>
                     </li>
-                    <li class="nav-item">
+                    <!--<li class="nav-item">
                         <a class="nav-link" href="./loginPage.html">Login/Register</a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </nav>
 
+        <!--Google Sign-In Button-->
+        <script src ="resources/js/test.js"></script>
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 
         <div id="LotName">
             <h2 class="textAligned"> ParkingLotName </h2>

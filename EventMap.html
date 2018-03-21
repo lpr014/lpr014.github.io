@@ -7,6 +7,9 @@
         <link rel="stylesheet" href="resources/css/index.css">
 		<link rel="stylesheet" href="resources/css/eventMap.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <meta name="google-signin-scope" content="profile email">
+        <meta name="google-signin-client_id" content="512485883540-4bq08gsc34i10p4blggc4660k4o8vqvd.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
     </head>
     <body>
 
@@ -34,13 +37,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./Owner_Attendant_Lot_Access.html">Worker Access</a>
                     </li>
-                    <li class="nav-item">
+                    <!--<li class="nav-item">
                         <a class="nav-link" href="./loginPage.html">Login/Register</a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </nav>
 
+        <!--Google Sign-In Button-->
+        <script src ="resources/js/test.js"></script>
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 
         <div class ="eventTable" style="overflow-x:auto">
                 <table id="events">
