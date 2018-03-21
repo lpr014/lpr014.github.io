@@ -1,0 +1,28 @@
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyAjGapBfiItTGLsokI9Hp5ZHb-0H-oiso0",
+			authDomain: "parking-vue.firebaseapp.com",
+			databaseURL: "https://parking-vue.firebaseio.com",
+			projectId: "parking-vue",
+			storageBucket: "parking-vue.appspot.com",
+			messagingSenderId: "512485883540"
+		};
+		var provider = new firebase.auth.GoogleAuthProvider();
+		firebase.initializeApp(config);
+    </script>
+    <script>
+    AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+        IdentityPoolId: 'us-east-2_n3cYC4lAz',
+        Logins: {
+           'accounts.google.com': authResult['id_token']
+        }
+     });
+
+     // Obtain AWS credentials
+     AWS.config.credentials.get(function(){
+        // Access AWS resources here.
+     });
+    </script>
+    <script src="src/CognitoSyncConflict.js, src/CognitoSyncDataset.js, src/CognitoSyncDatasetMetadata.js, /src/CognitoSyncDatasetUpdates.js, src/CognitoSyncLocalStorage.js, src/CongnitoSyncManager.js, src/CognitoSyncRecord.js, src/CognitoSyncRemoteStorage.js, src/CognitoSyncStoreInMemory.js, src/CognitoSyncStoreLocalStorage.js"></script>
