@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="css/login-page.css">
+<script src="js/login-page.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<head>
+		<title> ParkingVu</title>
+	</head>
+	
+	<body>
+	<!--- Nav Menu ------>
+		<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+			<a class="navbar-brand" href="./index.html">Parking Vu</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarToggler">
+				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="./index.html">Home</a>
+					</li>
+					<li class="nav-item">
+                        <a class="nav-link" href="./event-map.html">Events</a>
+                    </li>
+					<li class="nav-item">
+						 <a class="nav-link" href="./driver-access.html">Driver Access</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./creation-page.html">New Lot/Event</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./owner-attendant-lot-access.html">Worker Access</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="./login-page.html">Login/Register</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!---- Login page----->
+		 <div class="login-page textAligned">
+			<form>
+				<div class="form-group row">
+					<label for="inputUsername3" class="col-sm-1 col-md-2 col-form-label">Username</label>
+					<div class="col-sm-3 col-md-4">
+						<input type="text" class="form-control" id="inputUsername3" placeholder="Username">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="inputPassword3" class="col-sm-1 col-md-2 col-form-label">Password</label>
+					<div class="col-sm-3 col-md-4">
+						<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+					</div>
+				</div>
+				<div class="form-group row ">
+					<div class="col-sm-5 col-md-6" id ="forgotLinks">
+						<a href="registrationPage.html" >Forgot Username?</a>
+						<a href="registrationPage.html" id="forgotPass">Forgot Password?</a>
+					</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-6">
+						<a class="btn btn-primary " href="#" role= "button">Sign in</a>
+					</div>
+				</div>
+				<div class="form-group row textAligned">
+					<div class="col-sm-5 col-md-6" id ="links">
+						Don't have an account? <a href="registrationPage.html">Sign up!</a>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div id="footer">
+			<p>Copyright &copy; parkingvu.com</p>
+		</div>
+	</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>

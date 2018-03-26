@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<!--Custom CSS/JS/PHP used here: 'index.css', 'index.js' -->
+<!--Custom CSS/JS/PHP files used here: 'index.css', 'event-map.js'-->
 <html>
     <head>
         <title>Parking Vu</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/event-map.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <meta name="google-signin-scope" content="profile email">
         <meta name="google-signin-client_id" content="512485883540-4bq08gsc34i10p4blggc4660k4o8vqvd.apps.googleusercontent.com">
         <script src="https://apis.google.com/js/platform.js" async defer></script>
     </head>
     <body>
+
         <!-- Navigation Menu -->
         <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand" href="./index.html">Parking Vu</a>
@@ -20,10 +22,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarToggler">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="./index.html">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="./event-map.html">Events</a>
                     </li>
                     <li class="nav-item">
@@ -41,19 +43,12 @@
                 </ul>
             </div>
         </nav>
-
+        
         <!--Google Sign-In Button-->
         <script src ="js/g-sign-in.js"></script>
         <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 
-        <div class="wrapper input-group mb-3">
-            <input type="text" class="form-control" placeholder="Find an Event" aria-label="Find an Event" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">Search</button>
-            </div>
-        </div>
-
-        <div class="eventTable table-responsive" style="overflow-x:auto">
+       <div class="eventTable table-responsive" style="overflow-x:auto">
             <table class="table table-bordered" id="events">
                 <tr>
                     <th>Event</th>
@@ -67,21 +62,21 @@
                     <td>501 Dan Reneau Dr. Ruston,LA</td>
                     <td> 2/24/18 10:00 AM</td>
                     <td>
-						<button type="button" class="btn btn-primary btn-sm" data-toggle="popover"  data-container="body" data-trigger="focus" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
-						Details
-						</button>
+                        <button type="button" class="btn btn-primary btn-sm" data-toggle="popover"  data-container="body" data-trigger="focus" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
+                        Details
+                        </button>
                     </td>
                     <td>
                        <div class="dropdown">
-						  <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Save/Select
-						  </button>
-						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<a class="dropdown-item" href="#">Save</a>
-							 <div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Select</a>
-						  </div>
-						</div>
+                          <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Save/Select
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Save</a>
+                             <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Select</a>
+                          </div>
+                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -89,21 +84,21 @@
                     <td>501 Dan Reneau Dr. Ruston,LA</td>
                     <td> 2/24/18 10:00 AM</td>
                     <td>
-						<button type="button" class="btn btn-primary btn-sm" data-toggle="popover"  data-container="body" data-trigger="focus" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
-						Details
-						</button>
+                        <button type="button" class="btn btn-primary btn-sm" data-toggle="popover"  data-container="body" data-trigger="focus" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
+                        Details
+                        </button>
                     </td>
                     <td>
                        <div class="dropdown">
-						  <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Save/Select
-						  </button>
-						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<a class="dropdown-item" href="#">Save</a>
-							 <div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Select</a>
-						  </div>
-						</div>
+                          <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Save/Select
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Save</a>
+                             <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Select</a>
+                          </div>
+                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -111,45 +106,68 @@
                     <td>501 Dan Reneau Dr. Ruston,LA</td>
                     <td> 2/24/18 10:00 AM</td>
                     <td>
-						<button type="button" class="btn btn-primary btn-sm" data-toggle="popover"  data-container="body" data-trigger="focus" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
-						Details
-						</button>
+                        <button type="button" class="btn btn-primary btn-sm" data-toggle="popover"  data-container="body" data-trigger="focus" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">
+                        Details
+                        </button>
                     </td>
                     <td>
                        <div class="dropdown">
-						  <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Save/Select
-						  </button>
-						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<a class="dropdown-item" href="#">Save</a>
-							 <div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Select</a>
-						  </div>
-						</div>
+                          <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Save/Select
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Save</a>
+                             <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Select</a>
+                          </div>
+                        </div>
                     </td>
                 </tr>
             </table>
         </div>
 
+        <script src="js\event-map.js"></script>
+
+        <center>
+            <div id="googleMap"></div>
+            <script>
+                function myMap() {
+                    var mapProp = {
+                        center: new google.maps.LatLng(32.52938, -92.649237),
+                        zoom: 14
+                    };
+                    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+                    var center;
+                    function calculateCenter() {
+                        center = map.getCenter();
+                    }
+                    google.maps.event.addDomListener(map, 'idle', function () {
+                        calculateCenter();
+                    });
+                    google.maps.event.addDomListener(window, 'resize', function () {
+                        map.setCenter(center);
+                    });
+                }
+            </script>
+
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBse2wOe_D6lYsRj7VOgzTT-1n8fJdxocE&callback=myMap"></script>
+        </center>
+
         <div class="footer">
 			<p>Copyright &copy; parkingvu.com</p>
 		</div>
 
-
-        <script src="js/index.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
-		<script> $(function (){
-			  $('[data-toggle="popover"]').popover()
-		});
-		$('.popover-dismiss').popover({
-			trigger: 'focus'
-		});</script>
+        <script> $(function (){
+              $('[data-toggle="popover"]').popover()
+        });
+        $('.popover-dismiss').popover({
+            trigger: 'focus'
+        });</script>
     </body>
 </html>
