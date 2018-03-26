@@ -1,4 +1,4 @@
-var mysql = require('mysql');
+//var mysql = require('mysql');
 //Change this stuff to link to the DB
 
 
@@ -6,15 +6,15 @@ function onSignIn(googleUser) {
 	// Useful data for your client-side scripts:
 	// variables used by MySQL
 	var profile = googleUser.getBasicProfile();
-	var id = profile.getId();
+	//var id = profile.getId();
 	console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-	var full_name = profile.getName();
+	//var full_name = profile.getName();
 	console.log('Full Name: ' + profile.getName());
-	var first_name = profile.getGivenName();
+	//var first_name = profile.getGivenName();
 	console.log('Given Name: ' + profile.getGivenName());
-	var last_name = profile.getFamilyName();
+	//var last_name = profile.getFamilyName();
 	console.log('Family Name: ' + profile.getFamilyName());
-	var email = profile.getEmail();
+	//var email = profile.getEmail();
 	console.log("Email: " + profile.getEmail());
 
 	// The ID token you need to pass to your backend:
@@ -24,7 +24,7 @@ function onSignIn(googleUser) {
 	
   };
   
-  var con = mysql.createConnection({
+/*  var con = mysql.createConnection({
 	endpoint: "parkingvudb.cscupoamphmi.us-east-2.rds.amazonaws.com";
 	port: "3306";
 	password: "parkingvu";
@@ -39,4 +39,4 @@ con.connect(function(err){
 		if(err) throw err;
 		console.log("1 record inserted");
 	});
-});
+});*/
