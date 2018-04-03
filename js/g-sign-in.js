@@ -24,11 +24,11 @@ function onSignIn(googleUser) {
 	
   };
   
-/*  var con = mysql.createConnection({
-	endpoint: "parkingvudb.cscupoamphmi.us-east-2.rds.amazonaws.com";
-	port: "3306";
-	password: "parkingvu";
-	database: "parkingvu";
+  var con = mysql.createConnection({
+	host: "parkingvudb.cscupoamphmi.us-east-2.rds.amazonaws.com@3306",
+	user: "parkingvu",
+	password: "parkingvu",
+	database: mode === exports.MODE_PRODUCTION ? PRODUCTION_DB : TEST_DB
 });
 
 con.connect(function(err){
@@ -39,4 +39,4 @@ con.connect(function(err){
 		if(err) throw err;
 		console.log("1 record inserted");
 	});
-});*/
+});
