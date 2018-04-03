@@ -1,6 +1,7 @@
 //var mysql = require('mysql');
 //Change this stuff to link to the DB
-
+var mysql = require('mysql')
+  , async = require('async')
 
 function onSignIn(googleUser) {
 	// Useful data for your client-side scripts:
